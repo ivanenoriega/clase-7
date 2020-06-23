@@ -1,85 +1,162 @@
-/*CSS procesado de archivo sass*/
-@charset "UTF-8";
-/*segmentación de estilos*/
 * {
-  padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  padding: 0;
   border: 0;
-  outline: 0;
-}
+  box-sizing: border-box;
+  list-style: none; }
 
-body {
-  background: #fefdff;
-  font-family: Arial, Helvetica, sans-serif;
-}
+.link {
+  color: inherit;
+  text-decoration: inherit; }
 
-/*Extensión de estilo con prefijo %*/
-form .ctn-btn button[type="reset"],
-form .ctn-btn button[type="submit"] {
+.light .light-dark__section, .dark .light-dark__section {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 75px;
+  height: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
   border-radius: 5px;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 15px 30px;
-  color: #fff;
-  -webkit-filter: brightness(90%);
-  filter: brightness(90%);
-  /*operador &*/
-}
+  cursor: pointer; }
 
-form .ctn-btn button:hover[type="reset"],
-form .ctn-btn button:hover[type="submit"] {
-  -webkit-filter: brightness(110%);
-  filter: brightness(110%);
-}
+.light {
+  font-family: Segoe UI, Arial, Helvetica, sans-serif;
+  background-color: #f3f3f3; }
+  .light .page-header {
+    padding: 35px 0;
+    text-align: center; }
+    .light .page-header .logo {
+      max-width: 350px;
+      margin-bottom: 35px; }
+    .light .page-header .menu ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      max-width: 650px;
+      margin: 0 auto 35px; }
+      .light .page-header .menu ul .menu-item {
+        font-size: 20px;
+        padding: 10px; }
+        .light .page-header .menu ul .menu-item:hover {
+          cursor: pointer;
+          background-color: white; }
+        .light .page-header .menu ul .menu-item a::selection {
+          background-color: #cd6799;
+          color: white; }
+    .light .page-header .search-bar {
+      font-size: 20px;
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 5px; }
+      .light .page-header .search-bar:focus {
+        outline: none !important;
+        border: 3px solid #cd6799; }
+  .light .features {
+    max-width: 1920px;
+    margin: 0 auto;
+    color: #929292; }
+    .light .features ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(100px, auto); }
+      .light .features ul .feature {
+        padding: 15px; }
+        .light .features ul .feature .title {
+          font-size: 24px;
+          margin-bottom: 10px; }
+          .light .features ul .feature .title::selection {
+            background-color: #cd6799;
+            color: white; }
+        .light .features ul .feature .description {
+          font-size: 20px; }
+          .light .features ul .feature .description::selection {
+            background-color: #cd6799;
+            color: white; }
+        .light .features ul .feature:hover {
+          background-color: #cd6799;
+          color: white; }
+          .light .features ul .feature:hover::selection {
+            background-color: #929292; }
+  .light .light-dark__section {
+    background-image: url(./assets/dark.svg);
+    background-color: white; }
+    .light .light-dark__section:hover {
+      background-image: url(./assets/light.svg);
+      background-color: black; }
 
-/*anidamiento*/
-form {
-  background: #d5e2ea;
-  width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #acc6d6;
-}
+.dark {
+  font-family: Segoe UI, Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: white; }
+  .dark .page-header {
+    padding: 35px 0;
+    text-align: center; }
+    .dark .page-header .logo {
+      max-width: 350px;
+      margin-bottom: 35px;
+      filter: grayscale(100%); }
+    .dark .page-header .menu ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      max-width: 650px;
+      margin: 0 auto 35px; }
+      .dark .page-header .menu ul .menu-item {
+        font-size: 20px;
+        padding: 10px; }
+        .dark .page-header .menu ul .menu-item:hover {
+          cursor: pointer;
+          background-color: #6b717f; }
+        .dark .page-header .menu ul .menu-item a::selection {
+          background-color: black;
+          color: white; }
+    .dark .page-header .search-bar {
+      font-size: 20px;
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid white;
+      background-color: black; }
+      .dark .page-header .search-bar:focus {
+        outline: none !important;
+        border: 3px solid white; }
+  .dark .features {
+    max-width: 1920px;
+    margin: 0 auto;
+    color: #929292; }
+    .dark .features ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(100px, auto); }
+      .dark .features ul .feature {
+        padding: 15px; }
+        .dark .features ul .feature .title {
+          font-size: 24px;
+          margin-bottom: 10px; }
+          .dark .features ul .feature .title::selection {
+            background-color: black;
+            color: white; }
+        .dark .features ul .feature .description {
+          font-size: 20px; }
+          .dark .features ul .feature .description::selection {
+            background-color: black;
+            color: white; }
+        .dark .features ul .feature:hover {
+          background-color: #6b717f;
+          color: white; }
+          .dark .features ul .feature:hover::selection {
+            background-color: #929292; }
+  .dark .light-dark__section {
+    background-image: url(./assets/light.svg);
+    background-color: black; }
+    .dark .light-dark__section:hover {
+      background-image: url(./assets/dark.svg);
+      background-color: white; }
 
-form input,
-form textarea {
-  border-radius: 5px;
-  border: 1px solid #acc6d6;
-  width: 100%;
-  padding: 10px;
-  display: block;
-}
-
-form input:focus,
-form textarea:focus {
-  border: 1px dashed #8eb1c7;
-}
-
-form textarea {
-  /*Extensión de estilo de un elemento particular*/
-  resize: none;
-}
-
-form label {
-  display: inline-block;
-  margin: 10px 0;
-}
-
-form .ctn-btn {
-  width: 100%;
-  text-align: center;
-  margin: 20px 0 0 0;
-}
-
-form .ctn-btn button[type="reset"] {
-  /*Extensión de estilo con prefijo %*/
-  background: #eb4511;
-  margin-right: 20px;
-}
-
-form .ctn-btn button[type="submit"] {
-  background: #8eb1c7;
-}
+/*# sourceMappingURL=style.css.map */

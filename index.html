@@ -3,24 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario con SASS</title>
-    <link rel="stylesheet" href="style/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <form action="#" method="" class="formularios">
-      <label for="name">Nombre:</label>
-      <input type="text" name="name" id="name" />
-
-      <label for="mail">Correo electrónico:</label>
-      <input type="email" name="mail" id="mail" />
-
-      <label for="comment">Comentarios:</label>
-      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-
-      <div class="ctn-btn">
-        <button type="reset">Borrar</button>
-        <button type="submit">Enviar</button>
-      </div>
-    </form>
+  <body id="body" class="light">
+    <header class="page-header">
+      <a href="#">
+        <img class="logo" src="./assets/sass.png" alt="sass logo" />
+      </a>
+      <nav class="menu">
+        <ul>
+          <li class="menu-item">
+            <a class="link" href="#">
+              Install
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="link" href="#">
+              Learn Sass
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="link" href="#">
+              Blog
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="link" href="#">
+              Documentation
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="link" href="#">
+              Get Involved
+            </a>
+          </li>
+        </ul>
+        <form action="/" method="GET">
+          <input class="search-bar" placeholder="Search" type="text" />
+        </form>
+      </nav>
+    </header>
+    <main>
+      <section class="features">
+        <ul>
+          <li class="feature">
+            <h2 class="title">CSS Compatible</h2>
+            <p class="description">
+              Sass is completely compatible with all versions of CSS. We take
+              this compatibility seriously, so that you can seamlessly use any
+              available CSS libraries.
+            </p>
+          </li>
+          <li class="feature">
+            <h2 class="title">Feature Rich</h2>
+            <p class="description">
+              Sass boasts more features and abilities than any other CSS
+              extension language out there. The Sass Core Team has worked
+              endlessly to not only keep up, but stay ahead.
+            </p>
+          </li>
+          <li class="feature">
+            <h2 class="title">Mature</h2>
+            <p class="description">
+              Sass has been actively supported for over 13 years by its loving
+              Core Team.
+            </p>
+          </li>
+          <li class="feature">
+            <h2 class="title">Industry Approved</h2>
+            <p class="description">
+              Over and over again, the industry is choosing Sass as the premier
+              CSS extension language.
+            </p>
+          </li>
+          <li class="feature">
+            <h2 class="title">Large Community</h2>
+            <p class="description">
+              Sass is actively supported and developed by a consortium of
+              several tech companies and hundreds of developers.
+            </p>
+          </li>
+          <li class="feature">
+            <h2 class="title">Frameworks</h2>
+            <p class="description">
+              There are an endless number of frameworks built with Sass.
+              Compass, Bourbon, and Susy just to name a few.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <button
+      title="Change theme"
+      id="change-theme"
+      class="light-dark__section"
+    ></button>
+    <script>
+      var button = document.getElementById("change-theme");
+      button.addEventListener("click", function () {
+        var body = document.getElementById("body");
+        if (body.className === "light") {
+          body.className = "dark";
+        } else {
+          body.className = "light";
+        }
+      });
+    </script>
   </body>
 </html>
